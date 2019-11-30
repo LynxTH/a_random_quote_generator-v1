@@ -4,12 +4,14 @@ var source;
 var Year;
 
 function getRandomQuote (quoteList) {
-  for ( var i = 0; i < quoteList.length; i += 1) {
+  
+ return quoteList[Math.floor(Math.random() * quoteList.length)];
+}
+
+for ( var i = 0; i < quoteList.length; i += 1) {
   quote = quoteList[i].quote;
   source = quoteList[i].source;
   Year = quoteList[i].Year;
- return quoteList[Math.floor(Math.random() * quoteList.length)];
-}
 }
 
 
@@ -17,7 +19,7 @@ var quoteList = [
     {quote: 'WOOO!!', 
      source: "-Ellen, Queen of Durham",
      Year: 2018},
-     
+
     {quote: "Im your huckleberry", 
      source: "-Doc Holiday, Tombstone"},
 
@@ -45,7 +47,7 @@ function printQuote (getRandomQuote) {
 </p>
 }
 
-message += '<h2>quoteList' + getRandomQuote + '</h2>'
+message += '<h2>quoteList' + getRandomQuote + '</h2>';
 
 function print(message) {
   var quoteBoxDiv = document.getElementById("quoteBox");
