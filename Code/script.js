@@ -71,7 +71,7 @@ function printQuote () {
     var HTMLString = '<p class = "qoute">' + getRandomQuote() + '</p>';
     HTMLString += '<p class = "source"> + [quoteList].quote' + '</p>';
     if ([quoteList].citation) {
-        HTMLString += '<span class="citation">' + quotes[quoteIndex].citation + '</span>';
+        HTMLString += '<span class="citation">' + quotes[quoteList].citation + '</span>';
     }
     if ([quoteList].Year) {
         HTMLString += '<span class = "Year">' + quote[quoteList].Year + '</p>';
