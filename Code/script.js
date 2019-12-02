@@ -62,27 +62,31 @@ var quoteList = [
 ]
 
 function getRandomQuote () {
-  return quoteList[Math.floor(Math.random() * quoteList.length)];
- }
 
+  var getRandomNumber = quoteList[Math.floor(Math.random() * quoteList.length)];
+  return getRandomNumber;
+ }
+ getRandomQuote();
 console.log(getRandomQuote());
 
 function printQuote () {
-    var HTMLString = '<p class = "qoute">' + getRandomQuote() + '</p>';
-    HTMLString += '<p class = "source"> + [quoteList].quote' + '</p>';
+
+    var HTMLString = '<p class = "qoute">' + getRandomQuote + '</p>';
+    HTMLString += '<p class = "source"> + [quoteList].quotes' + '</p>';
     if ([quoteList].citation) {
         HTMLString += '<span class="citation">' + quotes[quoteList].citation + '</span>';
     }
     if ([quoteList].Year) {
         HTMLString += '<span class = "Year">' + quote[quoteList].Year + '</p>';
     }
+    message += '<h2>' + getRandomQuote() + '</h2>';
  console.log(HTMLString);   
  return getRandomQuote();
 }
-
+printQuote();
 console.log(printQuote());
 
-message += '<h2>' + getRandomQuote() + '</h2>';
+
 
 function print(message) {
   var quoteBoxDiv = document.getElementById("quoteBox");
